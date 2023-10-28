@@ -1,0 +1,95 @@
+.home {
+  height: 100vh;
+  background: linear-gradient(45deg, #b41a83 0%, #cc092f 49%, #f36279 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  margin: 0 14px;
+  padding: 0 4px;
+  background-color: #e4e5e9;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0px 3px 6px #00000033;
+}
+
+.left-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-side img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.first-line {
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: linear-gradient(to right, #f36279 0%, #cc092f 10%, #b41a83 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.app-title {
+  margin: 10px 0;
+  margin-bottom: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: linear-gradient(to right, #f36279 0%, #cc092f 10%, #b41a83 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-top: 0;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  border-radius: 24px;
+  border: none;
+  padding: 0 48px;
+  background: #fff;
+  color: #e1173f;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px #00000033;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button:hover {
+  color: white;
+  background: linear-gradient(45deg, #b41a83 0%, #cc092f 49%, #f36279 100%);
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    width: 100%;
+    height: 80%;
+  }
+
+  .left-side {
+    display: none;
+  }
+}
