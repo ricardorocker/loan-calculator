@@ -1,7 +1,105 @@
 <app-navbar></app-navbar>
-<body>
+<div class="calculator-page">
   <div class="container">
-    <div class="left-side"></div>
-    <div class="right-side"></div>
+    <div class="left-side">
+      <div class="loan-type">
+        <h5>Tipo Empréstimo</h5>
+        <div class="row">
+          <button class="btn-loan-type">Casa</button>
+          <button class="btn-loan-type">Carro</button>
+          <button class="btn-loan-type">Pessoal</button>
+        </div>
+      </div>
+      <div class="loan-amount">
+        <h5>Valor Empréstimo</h5>
+        <div class="row">
+          <input
+            type="range"
+            class="slider"
+            min="1000"
+            max="50000"
+            value="0"
+            id="range-slider-loan-amount"
+          />
+          <input
+            type="number"
+            min="1000"
+            max="50000"
+            value="0"
+            id="input-slider-loan-amount"
+          />
+        </div>
+      </div>
+      <div class="interest-amount">
+        <h5>Taxa Empréstimo</h5>
+        <div class="row">
+          <input
+            type="range"
+            class="slider"
+            min="0"
+            max="25"
+            value="0"
+            id="range-slider-interest-amount"
+          />
+          <input
+            type="number"
+            min="0"
+            max="25"
+            value="0"
+            id="input-slider-interest-amount"
+          />%
+        </div>
+      </div>
+      <div class="loan-term">
+        <h5>Prazo Empréstimo</h5>
+        <div class="row">
+          <input
+            type="range"
+            class="slider"
+            min="0"
+            max="60"
+            value="0"
+            id="range-slider-loan-term"
+          />
+          <input
+            type="number"
+            min="0"
+            max="60"
+            value="0"
+            id="input-slider-loan-term"
+          />
+          <select name="term-type" id="term-type">
+            <option value="year">Anos</option>
+            <option value="month">Meses</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="card">
+        <div class="card-top">
+          <!-- Gráfico com distinção entre vermelho claro e vermelho escuro-->
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <span class="small-circle-light-red"></span>
+            <div class="principal">Valor simulado</div>
+            <div class="principal-amout">R$ 50.000,00</div>
+          </div>
+          <div class="row">
+            <span class="small-circle-dark-red"></span>
+            <div class="interest">Juros a Pagar</div>
+            <div class="interest-amout">R$ 3.000,00</div>
+          </div>
+          <div class="row">
+            <div class="total">Valor total a pagar</div>
+            <div class="total-amout">R$ 53.000,00</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="apply">Simular</button>
+        </div>
+      </div>
+    </div>
   </div>
-</body>
+</div>

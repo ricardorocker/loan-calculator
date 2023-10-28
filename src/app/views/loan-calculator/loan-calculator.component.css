@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.calculator-page {
+  background: linear-gradient(45deg, #b41a83 0%, #cc092f 49%, #f36279 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+}
+
+.left-side {
+  color: white;
+}
+
+.left-side,
+.right-side {
+  flex: 1;
+  padding: 20px;
+}
+
+.row {
+  margin: 20px 0;
+}
+
+h5 {
+    margin-top: 20px;
+}
+
+.btn-loan-type {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background: #f26178;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-loan-type:hover {
+  background: #960923;
+}
+
+input[type="number"] {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  min-width: 87px;
+  margin-right: 10px;
+}
+
+.slider {
+  margin: 10px;
+  min-width: 160px;
+}
+
+select {
+  padding: 10px;
+  background: #960923;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: #e4e5e9;
+}
+
+.card-top {
+  height: 200px;
+}
+
+.small-circle-light-red {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff6b92;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.small-circle-dark-red {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e4002b;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.principal,
+.interest,
+.total {
+  flex: 1;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.total-amout {
+  font-weight: bold;
+}
+
+button.apply {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 10px;
+  background: #fff;
+  background: #fff;
+  color: #e1173f;
+  box-shadow: 0px 3px 6px #00000033;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button.apply:hover {
+  color: white;
+  background: linear-gradient(45deg, #b41a83 0%, #cc092f 49%, #f36279 100%);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+  }
+}
