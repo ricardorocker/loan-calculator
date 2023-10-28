@@ -1,105 +1,122 @@
-<app-navbar></app-navbar>
 <div class="calculator-page">
-  <div class="container">
+  <form [formGroup]="emprestimoForm" (ngSubmit)="onSubmit()">
     <div class="left-side">
-      <div class="loan-type">
+      <div class="section">
         <h5>Tipo Empréstimo</h5>
-        <div class="row">
-          <button class="btn-loan-type">Casa</button>
-          <button class="btn-loan-type">Carro</button>
-          <button class="btn-loan-type">Pessoal</button>
+        <div class="checkbox-group">
+          <label for="loan-type-house" class="ckb-loan-type">
+            <input
+              type="checkbox"
+              id="loan-type-house"
+              formControlName="tipoEmprestimo.casa"
+            />
+            Casa
+          </label>
+
+          <label for="loan-type-personal" class="ckb-loan-type">
+            <input
+              type="checkbox"
+              id="loan-type-personal"
+              formControlName="tipoEmprestimo.pessoal"
+            />
+            Pessoal
+          </label>
+
+          <label for="loan-type-auto" class="ckb-loan-type">
+            <input
+              type="checkbox"
+              id="loan-type-auto"
+              formControlName="tipoEmprestimo.carro"
+            />
+            Carro
+          </label>
         </div>
       </div>
-      <div class="loan-amount">
+      <div class="section">
         <h5>Valor Empréstimo</h5>
-        <div class="row">
+        <div class="input-container">
           <input
             type="range"
             class="slider"
-            min="1000"
-            max="50000"
-            value="0"
             id="range-slider-loan-amount"
+            formControlName="valorEmprestimo"
           />
           <input
             type="number"
-            min="1000"
-            max="50000"
-            value="0"
             id="input-slider-loan-amount"
+            class="input-slider-loan-amount"
+            formControlName="valorEmprestimo"
           />
         </div>
       </div>
-      <div class="interest-amount">
+      <div class="section">
         <h5>Taxa Empréstimo</h5>
-        <div class="row">
+        <div class="input-container">
           <input
             type="range"
             class="slider"
-            min="0"
-            max="25"
-            value="0"
             id="range-slider-interest-amount"
+            formControlName="taxaEmprestimo"
           />
           <input
             type="number"
-            min="0"
-            max="25"
-            value="0"
             id="input-slider-interest-amount"
-          />%
+            class="input-slider-interest-amount"
+            formControlName="taxaEmprestimo"
+          />
+          <span>%</span>
         </div>
       </div>
-      <div class="loan-term">
+      <div class="section">
         <h5>Prazo Empréstimo</h5>
-        <div class="row">
+        <div class="input-container">
           <input
             type="range"
             class="slider"
-            min="0"
-            max="60"
-            value="0"
             id="range-slider-loan-term"
+            formControlName="prazoEmprestimo.quantidade"
           />
           <input
             type="number"
-            min="0"
-            max="60"
-            value="0"
             id="input-slider-loan-term"
+            class="input-slider-loan-term"
+            formControlName="prazoEmprestimo.quantidade"
           />
-          <select name="term-type" id="term-type">
+          <select
+            name="term-type"
+            id="term-type"
+            formControlName="prazoEmprestimo.tipo"
+          >
             <option value="year">Anos</option>
             <option value="month">Meses</option>
           </select>
         </div>
       </div>
     </div>
+
     <div class="right-side">
       <div class="card">
-        <div class="card-top">
-          <!-- Gráfico com distinção entre vermelho claro e vermelho escuro-->
-        </div>
+        <div class="card-top"></div>
         <div class="card-body">
           <div class="row">
-            <span class="small-circle-light-red"></span>
-            <div class="principal">Valor simulado</div>
-            <div class="principal-amout">R$ 50.000,00</div>
+            <span class="small-circle light-red"></span>
+            <div class="info">Valor simulado</div>
+            <div class="amount-total">R$ 50.000,00</div>
           </div>
           <div class="row">
-            <span class="small-circle-dark-red"></span>
-            <div class="interest">Juros a Pagar</div>
-            <div class="interest-amout">R$ 3.000,00</div>
+            <span class="small-circle dark-red"></span>
+            <div class="info">Juros a Pagar</div>
+            <div class="amount-total">R$ 3.000,00</div>
           </div>
           <div class="row">
-            <div class="total">Valor total a pagar</div>
-            <div class="total-amout">R$ 53.000,00</div>
+            <div class="info fw-bold">Valor total a pagar</div>
+            <div class="amount-total fw-bold">R$ 53.000,00</div>
           </div>
         </div>
         <div class="card-footer">
-          <button class="apply">Simular</button>
+          <button type="submit" class="apply">Simular</button>
         </div>
       </div>
     </div>
-  </div>
+  </form>
 </div>
