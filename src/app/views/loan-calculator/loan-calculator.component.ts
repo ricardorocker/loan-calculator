@@ -20,15 +20,7 @@ export class LoanCalculatorComponent {
       valorEmprestimo: [1000, [Validators.min(1000), Validators.max(50000)]],
       taxaEmprestimo: [0, [Validators.min(0), Validators.max(25)]],
       prazoEmprestimo: [1, [Validators.min(1), Validators.max(60)]],
-      tipoPrazo: ['', [Validators.min(1), Validators.max(60)]]
-    });
-  }
-
-  ngOnInit() {
-    // Inicializa o formulário com valores padrão se necessário
-    this.emprestimoForm.patchValue({
-      valorEmprestimo: 1000,
-      loanType: null,
+      tipoPrazo: ['year', [Validators.min(1), Validators.max(60)]]
     });
   }
 

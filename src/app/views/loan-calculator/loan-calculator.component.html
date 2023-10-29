@@ -27,12 +27,16 @@
             class="slider"
             id="range-slider-loan-amount"
             formControlName="valorEmprestimo"
+            [min]="1000"
+            [max]="50000"
+            [ngModel]="this.emprestimoForm.controls['valorEmprestimo'].value"
           />
           <input
             type="number"
             id="input-slider-loan-amount"
             class="input-slider-loan-amount"
             formControlName="valorEmprestimo"
+            [ngModel]="this.emprestimoForm.controls['valorEmprestimo'].value"
           />
         </div>
       </div>
@@ -44,12 +48,16 @@
             class="slider"
             id="range-slider-interest-amount"
             formControlName="taxaEmprestimo"
+            [min]="0"
+            [max]="25"
+            [ngModel]="this.emprestimoForm.controls['taxaEmprestimo'].value"
           />
           <input
             type="number"
             id="input-slider-interest-amount"
             class="input-slider-interest-amount"
             formControlName="taxaEmprestimo"
+            [ngModel]="this.emprestimoForm.controls['taxaEmprestimo'].value"
           />
           <span>%</span>
         </div>
@@ -61,13 +69,17 @@
             type="range"
             class="slider"
             id="range-slider-loan-term"
-            formControlName="valorEmprestimo"
+            formControlName="prazoEmprestimo"
+            [min]="1"
+            [max]="60"
+            [ngModel]="this.emprestimoForm.controls['prazoEmprestimo'].value"
           />
           <input
             type="number"
             id="input-slider-loan-term"
             class="input-slider-loan-term"
-            formControlName="valorEmprestimo"
+            formControlName="prazoEmprestimo"
+            [ngModel]="this.emprestimoForm.controls['prazoEmprestimo'].value"
           />
           <select
             name="term-type"
