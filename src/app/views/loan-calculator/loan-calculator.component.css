@@ -60,10 +60,6 @@ form {
   transition: background 0.3s;
 }
 
-.ckb-loan-type-checkbox {
-  display: none;
-}
-
 .ckb-loan-type:hover {
   background: #960923;
 }

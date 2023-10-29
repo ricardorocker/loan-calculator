@@ -3,33 +3,20 @@
     <div class="left-side">
       <div class="section">
         <h5>Tipo Empréstimo</h5>
+
         <div class="checkbox-group">
-          <label for="loan-type-house" class="ckb-loan-type">
-            <input
-              type="checkbox"
-              id="loan-type-house"
-              formControlName="tipoEmprestimo.casa"
-            />
+          <div class="ckb-loan-type">
+            <input type="radio" formControlName="loanType" [value]="1" />
             Casa
-          </label>
-
-          <label for="loan-type-personal" class="ckb-loan-type">
-            <input
-              type="checkbox"
-              id="loan-type-personal"
-              formControlName="tipoEmprestimo.pessoal"
-            />
-            Pessoal
-          </label>
-
-          <label for="loan-type-auto" class="ckb-loan-type">
-            <input
-              type="checkbox"
-              id="loan-type-auto"
-              formControlName="tipoEmprestimo.carro"
-            />
+          </div>
+          <div class="ckb-loan-type">
+            <input type="radio" formControlName="loanType" [value]="2" />
             Carro
-          </label>
+          </div>
+          <div class="ckb-loan-type">
+            <input type="radio" formControlName="loanType" [value]="3" />
+            Pessoal
+          </div>
         </div>
       </div>
       <div class="section">
@@ -74,18 +61,18 @@
             type="range"
             class="slider"
             id="range-slider-loan-term"
-            formControlName="prazoEmprestimo.quantidade"
+            formControlName="valorEmprestimo"
           />
           <input
             type="number"
             id="input-slider-loan-term"
             class="input-slider-loan-term"
-            formControlName="prazoEmprestimo.quantidade"
+            formControlName="valorEmprestimo"
           />
           <select
             name="term-type"
             id="term-type"
-            formControlName="prazoEmprestimo.tipo"
+            formControlName="tipoPrazo"
           >
             <option value="year">Anos</option>
             <option value="month">Meses</option>
