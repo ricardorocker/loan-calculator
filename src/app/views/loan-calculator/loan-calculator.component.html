@@ -28,7 +28,8 @@
             id="range-slider-loan-amount"
             formControlName="valorEmprestimo"
             [min]="1000"
-            [max]="50000"
+            [max]="200000"
+            [step]="1000"
             [ngModel]="this.emprestimoForm.controls['valorEmprestimo'].value"
           />
           <input
@@ -50,6 +51,7 @@
             formControlName="taxaEmprestimo"
             [min]="0"
             [max]="25"
+            [step]="0.1"
             [ngModel]="this.emprestimoForm.controls['taxaEmprestimo'].value"
           />
           <input
@@ -59,7 +61,7 @@
             formControlName="taxaEmprestimo"
             [ngModel]="this.emprestimoForm.controls['taxaEmprestimo'].value"
           />
-          <span>%</span>
+          <span>% a.a</span>
         </div>
       </div>
       <div class="section">
@@ -81,11 +83,7 @@
             formControlName="prazoEmprestimo"
             [ngModel]="this.emprestimoForm.controls['prazoEmprestimo'].value"
           />
-          <select
-            name="term-type"
-            id="term-type"
-            formControlName="tipoPrazo"
-          >
+          <select name="term-type" id="term-type" formControlName="tipoPrazo">
             <option value="year">Anos</option>
             <option value="month">Meses</option>
           </select>
@@ -95,21 +93,36 @@
 
     <div class="right-side">
       <div class="card">
-        <div class="card-top"></div>
+        <div class="card-top">
+          <div class="row">
+            <div class="info fw-bold">
+              Empréstimo
+              <span *ngIf="emprestimoForm.value.tipoEmprestimo">
+                : {{ emprestimoForm.value.tipoEmprestimo | uppercase }}
+              </span>
+            </div>
+          </div>
+        </div>
         <div class="card-body">
           <div class="row">
             <span class="small-circle light-red"></span>
             <div class="info">Valor simulado</div>
-            <div class="amount-total">R$ 50.000,00</div>
+            <div class="amount-total">
+              {{ emprestimoForm.value.valorSimulado | currency : "BRL" }}
+            </div>
           </div>
           <div class="row">
             <span class="small-circle dark-red"></span>
             <div class="info">Juros a Pagar</div>
-            <div class="amount-total">R$ 3.000,00</div>
+            <div class="amount-total">
+              {{ emprestimoForm.value.jurosPagar | currency : "BRL" }}
+            </div>
           </div>
           <div class="row">
             <div class="info fw-bold">Valor total a pagar</div>
-            <div class="amount-total fw-bold">R$ 53.000,00</div>
+            <div class="amount-total fw-bold">
+              {{ emprestimoForm.value.valorTotalPagar | currency : "BRL" }}
+            </div>
           </div>
         </div>
         <div class="card-footer">

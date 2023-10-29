@@ -1,0 +1,175 @@
+{
+  "simulations": [
+    {
+      "loanType": null,
+      "valorEmprestimo": 1000,
+      "taxaEmprestimo": 0,
+      "prazoEmprestimo": 1,
+      "tipoPrazo": "year",
+      "valorSimulado": 1000,
+      "jurosPagar": 100,
+      "valorTotalPagar": 1100,
+      "id": 1
+    },
+    {
+      "valorSimulado": 6009,
+      "jurosPagar": 648972,
+      "valorTotalPagar": 654981,
+      "id": 2
+    },
+    {
+      "valorSimulado": 6009,
+      "jurosPagar": 54081,
+      "valorTotalPagar": 60090,
+      "id": 3
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 1200,
+      "valorTotalPagar": 2200,
+      "id": 4
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 1200,
+      "valorTotalPagar": 2200,
+      "id": 5
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 600,
+      "valorTotalPagar": 1600,
+      "id": 6
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 600,
+      "valorTotalPagar": 1600,
+      "id": 7
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 50,
+      "valorTotalPagar": 1050,
+      "id": 8
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 100,
+      "valorTotalPagar": 1100,
+      "id": 9
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 50,
+      "valorTotalPagar": 1050,
+      "id": 10
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 50,
+      "valorTotalPagar": 1050,
+      "id": 11
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 50,
+      "valorTotalPagar": 1050,
+      "id": 12
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 4.166666666666667,
+      "valorTotalPagar": 1004.1666666666666,
+      "id": 13
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 14
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 15
+    },
+    {
+      "valorSimulado": 1000,
+      "jurosPagar": 93.00000000000001,
+      "valorTotalPagar": 1093,
+      "id": 16
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 17
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 18
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 19
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 20
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 1000,
+      "jurosPagar": 84,
+      "valorTotalPagar": 1084,
+      "id": 21
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 1000,
+      "jurosPagar": 111.99999999999999,
+      "valorTotalPagar": 1112,
+      "id": 22
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 23
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 24
+    },
+    {
+      "tipoEmprestimo": "Pessoal",
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 25
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 1000,
+      "jurosPagar": 9840,
+      "valorTotalPagar": 10840,
+      "id": 26
+    }
+  ]
+}
