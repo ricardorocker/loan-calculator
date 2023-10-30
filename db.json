@@ -170,6 +170,356 @@
       "jurosPagar": 9840,
       "valorTotalPagar": 10840,
       "id": 26
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 20000,
+      "jurosPagar": 140,
+      "valorTotalPagar": 20140,
+      "id": 27
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 17,
+      "valorTotalPagar": 1017,
+      "id": 28
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 16000,
+      "jurosPagar": 1360,
+      "valorTotalPagar": 17360,
+      "id": 29
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 30
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 195,
+      "valorTotalPagar": 1195,
+      "id": 31
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 29,
+      "valorTotalPagar": 1029,
+      "id": 32
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 1000,
+      "jurosPagar": 17,
+      "valorTotalPagar": 1017,
+      "id": 33
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 26.000000000000004,
+      "valorTotalPagar": 1026,
+      "id": 34
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 36000,
+      "jurosPagar": 936.0000000000002,
+      "valorTotalPagar": 36936,
+      "id": 35
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 36000,
+      "jurosPagar": 3779.999999999999,
+      "valorTotalPagar": 39780,
+      "id": 36
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 36000,
+      "jurosPagar": 9000,
+      "valorTotalPagar": 45000,
+      "id": 37
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 36000,
+      "jurosPagar": 36,
+      "valorTotalPagar": 36036,
+      "id": 38
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 36000,
+      "jurosPagar": 9000,
+      "valorTotalPagar": 45000,
+      "id": 39
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 36000,
+      "jurosPagar": 7200,
+      "valorTotalPagar": 43200,
+      "id": 40
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 36000,
+      "jurosPagar": 288,
+      "valorTotalPagar": 36288,
+      "id": 41
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 36000,
+      "jurosPagar": 9000,
+      "valorTotalPagar": 45000,
+      "id": 42
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 36000,
+      "jurosPagar": 540000,
+      "valorTotalPagar": 576000,
+      "id": 43
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 153,
+      "valorTotalPagar": 1153,
+      "id": 44
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 13000,
+      "jurosPagar": 17160,
+      "valorTotalPagar": 30160,
+      "id": 45
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 79,
+      "valorTotalPagar": 1079,
+      "id": 46
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 120,
+      "valorTotalPagar": 1120,
+      "id": 47
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 6600,
+      "valorTotalPagar": 7600,
+      "id": 48
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 14160,
+      "valorTotalPagar": 15160,
+      "id": 49
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 50
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 11484,
+      "valorTotalPagar": 12484,
+      "id": 51
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 13140,
+      "valorTotalPagar": 14140,
+      "id": 52
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 10203,
+      "valorTotalPagar": 11203,
+      "id": 53
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 3860.0000000000005,
+      "valorTotalPagar": 4860,
+      "id": 54
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 10176,
+      "valorTotalPagar": 11176,
+      "id": 55
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 6802,
+      "valorTotalPagar": 7802,
+      "id": 56
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 8299.000000000002,
+      "valorTotalPagar": 9299.000000000002,
+      "id": 57
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 151,
+      "valorTotalPagar": 1151,
+      "id": 58
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 5580,
+      "valorTotalPagar": 6580,
+      "id": 59
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 9636,
+      "valorTotalPagar": 10636,
+      "id": 60
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 8648,
+      "valorTotalPagar": 9648,
+      "id": 61
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 3870,
+      "valorTotalPagar": 4870,
+      "id": 62
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 960,
+      "valorTotalPagar": 1960,
+      "id": 63
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 1344,
+      "valorTotalPagar": 2344,
+      "id": 64
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 47000,
+      "jurosPagar": 63168,
+      "valorTotalPagar": 110168,
+      "id": 65
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 47000,
+      "jurosPagar": 49632,
+      "valorTotalPagar": 96632,
+      "id": 66
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 47000,
+      "jurosPagar": 30080,
+      "valorTotalPagar": 77080,
+      "id": 67
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 214,
+      "valorTotalPagar": 1214,
+      "id": 68
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 8131.999999999999,
+      "valorTotalPagar": 9132,
+      "id": 69
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 6090,
+      "valorTotalPagar": 7090,
+      "id": 70
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 1305,
+      "valorTotalPagar": 2305,
+      "id": 71
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 1000,
+      "jurosPagar": 1305,
+      "valorTotalPagar": 2305,
+      "id": 72
+    },
+    {
+      "tipoEmprestimo": "Pessoal",
+      "valorSimulado": 1000,
+      "jurosPagar": 1305,
+      "valorTotalPagar": 2305,
+      "id": 73
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 74
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 10140,
+      "valorTotalPagar": 11140,
+      "id": 75
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 1000,
+      "jurosPagar": 10140,
+      "valorTotalPagar": 11140,
+      "id": 76
     }
   ]
 }

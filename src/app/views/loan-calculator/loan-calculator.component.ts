@@ -1,6 +1,6 @@
-import { formatCurrency } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Graph } from 'src/app/model/graph';
 import { LoanCalculatorService } from 'src/app/services/loan-calculator.service';
 
 @Component({
@@ -14,6 +14,10 @@ export class LoanCalculatorComponent {
     { id: 1, description: 'Casa' },
     { id: 2, description: 'Carro' },
     { id: 3, description: 'Pessoal' },
+  ];
+  graphData: Array<Graph> = [
+    {value: 1000, color:'#ff6b92', size:'', legend:'Valor'},
+    {value: 100, color:'#e4002b', size:'', legend:'Juros'},
   ];
 
   constructor(
@@ -35,19 +39,6 @@ export class LoanCalculatorComponent {
     });
   }
 
-  calculaJuros(): number {
-    const valorEmprestimo = this.emprestimoForm.value.valorEmprestimo;
-    const taxaEmprestimo = this.emprestimoForm.value.taxaEmprestimo / 100;
-    const prazo = this.emprestimoForm.value.tipoPrazo === 'year' ? 12 : 1;
-    const prazoEmprestimo = this.emprestimoForm.value.prazoEmprestimo * prazo;
-    return valorEmprestimo * taxaEmprestimo * prazoEmprestimo;
-  }
-
-  calculaTotal(): number {
-    const valorEmprestimo = this.emprestimoForm.value.valorEmprestimo;
-    return valorEmprestimo + this.calculaJuros();
-  }
-
   onSubmit() {
     const formData = this.emprestimoForm.value;
     this.calculatorService.simulateLoan(formData).subscribe(
@@ -57,6 +48,17 @@ export class LoanCalculatorComponent {
         this.emprestimoForm.get('valorSimulado')?.setValue(result.valorSimulado);
         this.emprestimoForm.get('jurosPagar')?.setValue(result.jurosPagar);
         this.emprestimoForm.get('valorTotalPagar')?.setValue(result.valorTotalPagar);
+
+
+        const newGraphData = this.graphData.map((item, index) => {
+          if (index === 0) {
+            item.value = result.valorSimulado;
+          } else if (index === 1) {
+            item.value = result.jurosPagar;
+          }
+          return item;
+        });
+        this.graphData = newGraphData;
       },
       (error) => {
         console.error('Erro ao simular empréstimo', error);

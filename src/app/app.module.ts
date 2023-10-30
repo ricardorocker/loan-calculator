@@ -8,13 +8,15 @@ import { HomeComponent } from './views/home/home.component';
 import { LoanCalculatorComponent } from './views/loan-calculator/loan-calculator.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GraphBarComponent } from './components/graph-bar/graph-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoanCalculatorComponent,
-    NavbarComponent
+    NavbarComponent,
+    GraphBarComponent
   ],
   imports: [
     BrowserModule,

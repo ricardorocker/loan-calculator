@@ -112,7 +112,7 @@ select {
 }
 
 .card-top {
-  height: 200px;
+  height: auto; 
 }
 
 .small-circle {
