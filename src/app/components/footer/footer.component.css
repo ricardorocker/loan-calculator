@@ -1,0 +1,14 @@
+.container {
+  color: #e1173f;
+  text-align: center;
+}
+
+footer {
+  background-color: #e4e5e9;
+  padding: 20px 0;
+}
+
+a {
+  color: #e1173f;
+  text-decoration: none;
+}

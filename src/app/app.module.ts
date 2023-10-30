@@ -9,6 +9,7 @@ import { LoanCalculatorComponent } from './views/loan-calculator/loan-calculator
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GraphBarComponent } from './components/graph-bar/graph-bar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GraphBarComponent } from './components/graph-bar/graph-bar.component';
     HomeComponent,
     LoanCalculatorComponent,
     NavbarComponent,
-    GraphBarComponent
+    GraphBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

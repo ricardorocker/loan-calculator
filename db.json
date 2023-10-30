@@ -520,6 +520,20 @@
       "jurosPagar": 10140,
       "valorTotalPagar": 11140,
       "id": 76
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 200000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 200000,
+      "id": 77
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 200000,
+      "jurosPagar": 70000,
+      "valorTotalPagar": 270000,
+      "id": 78
     }
   ]
 }

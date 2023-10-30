@@ -6,7 +6,7 @@
 
 .calculator-page {
   background: linear-gradient(45deg, #b41a83 0%, #cc092f 49%, #f36279 100%);
-  min-height: 100vh;
+  min-height: calc(100vh - 117px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,8 +86,7 @@ select {
   max-width: 197px;
 }
 
-
-.input-slider-loan-amount{
+.input-slider-loan-amount {
   max-width: 190px;
 }
 
@@ -112,7 +111,7 @@ select {
 }
 
 .card-top {
-  height: auto; 
+  height: auto;
 }
 
 .small-circle {
@@ -174,6 +173,10 @@ button.apply:hover {
 }
 
 @media (max-width: 550px) {
+  .calculator-page {
+    min-height: 100vh;
+  }
+
   .left-side,
   .right-side {
     width: 100%;
