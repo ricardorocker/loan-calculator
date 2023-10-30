@@ -1,0 +1,99 @@
+.about {
+  background: linear-gradient(45deg, #b41a83 0%, #cc092f 49%, #f36279 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  line-height: 28px;
+}
+
+.container {
+  background-color: #e4e5e9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 1000px;
+  width: 100%;
+  text-align: left;
+}
+
+.first-line {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: linear-gradient(to right, #f36279 0%, #cc092f 10%, #b41a83 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  color: #a50f3c;
+  text-transform: uppercase;
+}
+
+.section-text {
+  font-size: 16px;
+  color: #7e5c5c;
+  margin-top: 10px;
+}
+
+.section-list {
+  list-style: decimal;
+  padding-left: 20px;
+  margin-top: 20px;
+  color: #7e5c5c;
+}
+
+.section-item {
+  margin-top: 15px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #a50f3c;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+}
+
+.inner-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.inner-inner-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.inner-item::marker {
+  font-size: 14px;
+}
+
+.inner-inner-item::marker {
+  font-size: 12px;
+  color: grey;
+}
+
+.test {
+  color: #a50f3c !important;
+}
+
+code {
+  font-size: 14px;
+  font-weight: bold;
+  color: #be5d5d;
+}
+
+@media screen and (max-width: 950px) {
+  .about {
+    align-items: flex-start;
+  }
+
+  .container {
+    max-width: 800px;
+  }
+}

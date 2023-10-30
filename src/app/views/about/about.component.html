@@ -1,0 +1,235 @@
+<div class="about">
+  <div class="container">
+    <div class="section">
+      <h2 class="first-line">Sobre o projeto</h2>
+      <p class="section-text">
+        O projeto em Angular é uma calculadora de empréstimo com juros simples
+        que permite aos usuários simular empréstimos para diferentes
+        finalidades, como casa, carro e pessoal. Ele apresenta uma interface
+        atraente e responsiva, com um design agradável e fácil de usar.
+      </p>
+      <p class="section-text">
+        O projeto utiliza técnicas avançadas de desenvolvimento Angular para
+        criar uma experiência de usuário interativa e informativa.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title" style="padding-top: 30px;">Descrição Técnica</h2>
+      <p class="section-text">
+        O projeto é uma aplicação Angular que segue as melhores práticas de
+        desenvolvimento e utiliza diversas técnicas avançadas. Aqui estão os
+        principais componentes e técnicas utilizadas:
+      </p>
+
+      <ol class="section-list">
+        <li class="section-item">
+          <p class="section-subtitle">
+            <strong>Módulos e Componentes Angular</strong>:
+          </p>
+          <ul class="inner-list">
+            <li class="inner-item">
+              <code>`AppModule`</code>: O módulo raiz do aplicativo Angular.
+            </li>
+            <li class="inner-item">
+              <code>`AppRoutingModule`</code>: Módulo de roteamento que gerencia
+              as rotas do aplicativo.
+            </li>
+            <li class="inner-item">
+              <code>`AppComponent`</code>: O componente raiz do aplicativo.
+            </li>
+            <li class="inner-item">
+              <strong><code class="test">VIEWS</code></strong
+              >:
+            </li>
+            <ul class="inner-inner-list">
+              <li class="inner-inner-item">
+                <code>`HomeComponent`</code>: Componente da página inicial
+                localizado na pasta <code>`views/home`</code>.
+              </li>
+              <li class="inner-inner-item">
+                <code>`AboutComponent`</code>: Componente da página "Sobre"
+                localizado na pasta <code>`views/about`</code>.
+              </li>
+              <li class="inner-inner-item">
+                <code>`LoanCalculatorComponent`</code>: Componente da calculadora
+                de empréstimos localizado na pasta
+                <code>`views/loanCalculator`</code>.
+              </li>
+            </ul>
+            <li class="inner-item">
+              <strong><code class="test">COMPONENTS</code></strong
+              >:
+            </li>
+            <ul class="inner-inner-list">
+              <li class="inner-inner-item">
+                <code>`NavbarComponent`</code>: Componente da barra de navegação
+                localizado na pasta <code>`components/navbar`</code>.
+              </li>
+              <li class="inner-inner-item">
+                <code>`FooterComponent`</code>: Componente do rodapé localizado na
+                pasta <code>`components/footer`</code>.
+              </li>
+              <li class="inner-inner-item">
+                <code>`GraphBarComponent`</code>: Componente que exibe gráficos de
+                barras localizado na pasta <code>`components/graphBar`</code>.
+              </li>
+            </ul>
+            <li class="inner-item">
+              <strong><code class="test">MODEL</code></strong
+              >:
+              <ul class="inner-inner-list">
+                <li class="inner-inner-item">
+                  <code>`Graph`</code>: Uma interface que define a estrutura de
+                  dados usada para criar gráficos de barras.
+                </li>
+              </ul>
+            </li>
+            <li class="inner-item">
+              <strong><code class="test">SERVICES</code></strong
+              >:
+              <ul class="inner-inner-list">
+                <li class="inner-inner-item">
+                  <code>`LoanCalculatorService`</code>: Um serviço que lida com a
+                  simulação de empréstimos. Ele faz chamadas HTTP para um
+                  serviço de simulação.
+                </li>
+              </ul>
+            </li>
+            <li class="inner-item">
+              <strong><code>db.json</code></strong
+              >:
+              <ul class="inner-inner-list">
+                <li class="inner-inner-item">
+                  Um arquivo JSON que pode conter dados simulados ou informações
+                  do aplicativo, utilizado pelo serviço
+                  <code>`LoanCalculatorService`</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="section-item">
+          <p class="section-subtitle"><strong>Roteamento</strong>:</p>
+          <ul class="inner-list">
+            <li class="inner-item">
+              O roteamento é configurado no <code>`AppRoutingModule`</code>, que
+              define as rotas para diferentes componentes.
+            </li>
+          </ul>
+        </li>
+        <li class="section-item">
+          <p class="section-subtitle">
+            <strong>HTML e CSS dos Componentes</strong>:
+          </p>
+          <ul class="inner-list">
+            <li class="inner-item">
+              Cada componente possui seus próprios arquivos HTML e CSS para
+              definir a estrutura e o estilo.
+            </li>
+            <li class="inner-item">
+              Os estilos estão definidos principalmente usando classes CSS.
+            </li>
+          </ul>
+        </li>
+        <li class="section-item">
+          <p class="section-subtitle"><strong>Serviços</strong>:</p>
+          <ul class="inner-list">
+            <li class="inner-item">
+              <code>`LoanCalculatorService`</code>: Um serviço que lida com a
+              simulação de empréstimos. Ele faz chamadas HTTP para um serviço de
+              simulação.
+            </li>
+          </ul>
+        </li>
+        <li class="section-item">
+          <p class="section-subtitle"><strong>Modelo de Dados</strong>:</p>
+          <ul class="inner-list">
+            <li class="inner-item">
+              <code>`Graph`</code>: Uma interface que define a estrutura de dados
+              usada para criar gráficos de barras.
+            </li>
+          </ul>
+        </li>
+        <li class="section-item">
+          <p class="section-subtitle">
+            <strong>Formulários e Validação</strong>:
+          </p>
+          <ul class="inner-list">
+            <li class="inner-item">
+              Formulários são definidos nos componentes usando o módulo
+              <code>`FormBuilder`</code>.
+            </li>
+            <li class="inner-item">
+              A validação de entrada é realizada usando as funcionalidades de
+              validação do Angular.
+            </li>
+          </ul>
+        </li>
+        <li class="section-item">
+          <p class="section-subtitle">
+            <strong>Roteamento de Navegação</strong>:
+          </p>
+          <ul class="inner-list">
+            <li class="inner-item">
+              A navegação entre as páginas é feita usando diretivas
+              <code>`routerLink`</code> nos links do componente de barra de
+              navegação.
+            </li>
+          </ul>
+        </li>
+        <li class="section-item">
+          <p class="section-subtitle"><strong>Estilização</strong>:</p>
+          <ul class="inner-list">
+            <li class="inner-item">
+              A estilização é feita principalmente com CSS, com definições de
+              estilos para os componentes e elementos da interface.
+            </li>
+          </ul>
+        </li>
+        <li class="section-item">
+          <p class="section-subtitle">
+            <strong>Comunicação de Dados</strong>:
+          </p>
+          <ul class="inner-list">
+            <li class="inner-item">
+              O componente <code>`LoanCalculatorComponent`</code> se comunica com
+              o serviço <code>`LoanCalculatorService`</code> para realizar a
+              simulação de empréstimo e atualizar os dados exibidos.
+            </li>
+          </ul>
+        </li>
+        <li class="section-item">
+          <p class="section-subtitle">
+            <strong>Gráficos de Barras</strong>:
+          </p>
+          <ul class="inner-list">
+            <li class="inner-item">
+              O componente <code>`GraphBarComponent`</code> é responsável por
+              exibir gráficos de barras com dados de simulação.
+            </li>
+          </ul>
+        </li>
+        <li class="section-item">
+          <p class="section-subtitle"><strong>Responsividade</strong>:</p>
+          <ul class="inner-list">
+            <li class="inner-item">
+              Há regras de estilo definidas para tornar o aplicativo responsivo
+              em telas menores.
+            </li>
+          </ul>
+        </li>
+        <li class="section-item">
+          <p class="section-subtitle"><strong>Requisições HTTP</strong>:</p>
+          <ul class="inner-list">
+            <li class="inner-item">
+              O aplicativo faz chamadas HTTP para um serviço simulado para obter
+              resultados de simulação de empréstimo.
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
