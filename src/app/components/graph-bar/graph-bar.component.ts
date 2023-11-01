@@ -31,7 +31,6 @@ export class GraphBarComponent {
   }
 
   MontarGrafico() {
-    console.log(this.list);
     this.list.forEach((element) => {
       this.Total += element.value;
     });

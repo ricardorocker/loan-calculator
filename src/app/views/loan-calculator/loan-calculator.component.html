@@ -1,91 +1,91 @@
 <div class="calculator-page">
-  <form [formGroup]="emprestimoForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="loanForm" (ngSubmit)="onSubmit()">
     <div class="left-side">
       <div class="section">
-        <h5>Tipo Empréstimo</h5>
+        <h5>Loan Type</h5>
 
         <div class="checkbox-group">
           <div class="ckb-loan-type">
             <input type="radio" formControlName="loanType" [value]="1" />
-            Casa
+            Home
           </div>
           <div class="ckb-loan-type">
             <input type="radio" formControlName="loanType" [value]="2" />
-            Carro
+            Car
           </div>
           <div class="ckb-loan-type">
             <input type="radio" formControlName="loanType" [value]="3" />
-            Pessoal
+            Personal
           </div>
         </div>
       </div>
       <div class="section">
-        <h5>Valor Empréstimo</h5>
+        <h5>Loan Amount</h5>
         <div class="input-container">
           <input
             type="range"
             class="slider"
             id="range-slider-loan-amount"
-            formControlName="valorEmprestimo"
+            formControlName="loanAmount"
             [min]="1000"
             [max]="200000"
             [step]="1000"
-            [ngModel]="this.emprestimoForm.controls['valorEmprestimo'].value"
+            [ngModel]="this.loanForm.controls['loanAmount'].value"
           />
           <input
             type="number"
             id="input-slider-loan-amount"
             class="input-slider-loan-amount"
-            formControlName="valorEmprestimo"
-            [ngModel]="this.emprestimoForm.controls['valorEmprestimo'].value"
+            formControlName="loanAmount"
+            [ngModel]="this.loanForm.controls['loanAmount'].value"
           />
         </div>
       </div>
       <div class="section">
-        <h5>Taxa Empréstimo</h5>
+        <h5>Interest Amount</h5>
         <div class="input-container">
           <input
             type="range"
             class="slider"
             id="range-slider-interest-amount"
-            formControlName="taxaEmprestimo"
+            formControlName="interestAmount"
             [min]="0"
             [max]="25"
             [step]="0.1"
-            [ngModel]="this.emprestimoForm.controls['taxaEmprestimo'].value"
+            [ngModel]="this.loanForm.controls['interestAmount'].value"
           />
           <input
             type="number"
             id="input-slider-interest-amount"
             class="input-slider-interest-amount"
-            formControlName="taxaEmprestimo"
-            [ngModel]="this.emprestimoForm.controls['taxaEmprestimo'].value"
+            formControlName="interestAmount"
+            [ngModel]="this.loanForm.controls['interestAmount'].value"
           />
-          <span>% a.a</span>
+          <span>% p.a.</span>
         </div>
       </div>
       <div class="section">
-        <h5>Prazo Empréstimo</h5>
+        <h5>Loan Term</h5>
         <div class="input-container">
           <input
             type="range"
             class="slider"
             id="range-slider-loan-term"
-            formControlName="prazoEmprestimo"
+            formControlName="loanTerm"
             [min]="1"
             [max]="60"
-            [ngModel]="this.emprestimoForm.controls['prazoEmprestimo'].value"
+            [ngModel]="this.loanForm.controls['loanTerm'].value"
           />
           <input
             type="number"
             id="input-slider-loan-term"
             class="input-slider-loan-term"
-            formControlName="prazoEmprestimo"
-            [ngModel]="this.emprestimoForm.controls['prazoEmprestimo'].value"
+            formControlName="loanTerm"
+            [ngModel]="this.loanForm.controls['loanTerm'].value"
           />
-          <select name="term-type" id="term-type" formControlName="tipoPrazo">
-            <option value="year">Anos</option>
-            <option value="month">Meses</option>
+          <select name="term-type" id="term-type" formControlName="termType">
+            <option value="year">Years</option>
+            <option value="month">Months</option>
           </select>
         </div>
       </div>
@@ -96,9 +96,9 @@
         <div class="card-top">
           <div class="row">
             <div class="info fw-bold">
-              Empréstimo
-              <span *ngIf="emprestimoForm.value.tipoEmprestimo">
-                : {{ emprestimoForm.value.tipoEmprestimo | uppercase }}
+              Loan
+              <span *ngIf="loanForm.value.loanType">
+                : {{ loanForm.value.loanTypeResponse | uppercase }}
               </span>
             </div>
           </div>
@@ -109,27 +109,27 @@
           </div>
           <div class="row">
             <span class="small-circle light-red"></span>
-            <div class="info">Valor simulado</div>
+            <div class="info">Principal</div>
             <div class="amount-total">
-              {{ emprestimoForm.value.valorSimulado | currency : "BRL" }}
+              {{ loanForm.value.principal | currency }}
             </div>
           </div>
           <div class="row">
             <span class="small-circle dark-red"></span>
-            <div class="info">Juros a Pagar</div>
+            <div class="info">Interest Payable</div>
             <div class="amount-total">
-              {{ emprestimoForm.value.jurosPagar | currency : "BRL" }}
+              {{ loanForm.value.interestPayable | currency }}
             </div>
           </div>
           <div class="row">
-            <div class="info fw-bold">Valor total a pagar</div>
+            <div class="info fw-bold">Total Amount Payable</div>
             <div class="amount-total fw-bold">
-              {{ emprestimoForm.value.valorTotalPagar | currency : "BRL" }}
+              {{ loanForm.value.totalAmountPayable | currency }}
             </div>
           </div>
         </div>
         <div class="card-footer">
-          <button type="submit" class="apply">Simular</button>
+          <button type="submit" class="apply">Calculate</button>
         </div>
       </div>
     </div>

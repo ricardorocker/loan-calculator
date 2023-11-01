@@ -597,6 +597,308 @@
       "jurosPagar": 1820.0000000000002,
       "valorTotalPagar": 2820,
       "id": 87
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 17000,
+      "jurosPagar": 2176,
+      "valorTotalPagar": 19176,
+      "id": 88
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 17000,
+      "jurosPagar": 2176,
+      "valorTotalPagar": 19176,
+      "id": 89
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 80000,
+      "jurosPagar": 153600,
+      "valorTotalPagar": 233600,
+      "id": 90
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 80000,
+      "jurosPagar": 153600,
+      "valorTotalPagar": 233600,
+      "id": 91
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 92
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 80000,
+      "jurosPagar": 312800.00000000006,
+      "valorTotalPagar": 392800.00000000006,
+      "id": 93
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 45000,
+      "jurosPagar": 39105,
+      "valorTotalPagar": 84105,
+      "id": 94
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 45000,
+      "jurosPagar": 257040.00000000003,
+      "valorTotalPagar": 302040,
+      "id": 95
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 45000,
+      "jurosPagar": 294525.00000000006,
+      "valorTotalPagar": 339525.00000000006,
+      "id": 96
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 45000,
+      "jurosPagar": 107100.00000000001,
+      "valorTotalPagar": 152100,
+      "id": 97
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 45000,
+      "jurosPagar": 5355.000000000001,
+      "valorTotalPagar": 50355,
+      "id": 98
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 45000,
+      "jurosPagar": 9360.000000000002,
+      "valorTotalPagar": 54360,
+      "id": 99
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 45000,
+      "jurosPagar": 11250,
+      "valorTotalPagar": 56250,
+      "id": 100
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 45000,
+      "jurosPagar": 675000,
+      "valorTotalPagar": 720000,
+      "id": 101
+    },
+    {
+      "tipoEmprestimo": "Pessoal",
+      "valorSimulado": 64000,
+      "jurosPagar": 26624.000000000004,
+      "valorTotalPagar": 90624,
+      "id": 102
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 135000,
+      "jurosPagar": 83700,
+      "valorTotalPagar": 218700,
+      "id": 103
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 135000,
+      "jurosPagar": 135000,
+      "valorTotalPagar": 270000,
+      "id": 104
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 89000,
+      "jurosPagar": 72980,
+      "valorTotalPagar": 161980,
+      "id": 105
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 89000,
+      "jurosPagar": 51264.000000000015,
+      "valorTotalPagar": 140264,
+      "id": 106
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 89000,
+      "jurosPagar": 78320,
+      "valorTotalPagar": 167320,
+      "id": 107
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 105000,
+      "jurosPagar": 92400,
+      "valorTotalPagar": 197400,
+      "id": 108
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 92000,
+      "jurosPagar": 73600,
+      "valorTotalPagar": 165600,
+      "id": 109
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 92000,
+      "jurosPagar": 87584,
+      "valorTotalPagar": 179584,
+      "id": 110
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 134000,
+      "jurosPagar": 107200,
+      "valorTotalPagar": 241200,
+      "id": 111
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 134000,
+      "jurosPagar": 134000,
+      "valorTotalPagar": 268000,
+      "id": 112
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 123000,
+      "jurosPagar": 98400,
+      "valorTotalPagar": 221400,
+      "id": 113
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 123000,
+      "jurosPagar": 123000,
+      "valorTotalPagar": 246000,
+      "id": 114
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 118000,
+      "jurosPagar": 84960,
+      "valorTotalPagar": 202960,
+      "id": 115
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 118000,
+      "jurosPagar": 117999.99999999999,
+      "valorTotalPagar": 236000,
+      "id": 116
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 122000,
+      "jurosPagar": 97600,
+      "valorTotalPagar": 219600,
+      "id": 117
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 122000,
+      "jurosPagar": 122000,
+      "valorTotalPagar": 244000,
+      "id": 118
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 136000,
+      "jurosPagar": 108800,
+      "valorTotalPagar": 244800,
+      "id": 119
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 136000,
+      "jurosPagar": 136000,
+      "valorTotalPagar": 272000,
+      "id": 120
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 137000,
+      "jurosPagar": 109600,
+      "valorTotalPagar": 246600,
+      "id": 121
+    },
+    {
+      "tipoEmprestimo": "Carro",
+      "valorSimulado": 137000,
+      "jurosPagar": 137000,
+      "valorTotalPagar": 274000,
+      "id": 122
+    },
+    {
+      "tipoEmprestimo": "Tipo de empréstimo desconhecido",
+      "valorSimulado": 1000,
+      "jurosPagar": 0,
+      "valorTotalPagar": 1000,
+      "id": 123
+    },
+    {
+      "loanTypeResponse": "",
+      "interestPayable": null,
+      "totalAmountPayable": null,
+      "id": 124
+    },
+    {
+      "loanTypeResponse": "Car",
+      "interestPayable": null,
+      "totalAmountPayable": null,
+      "id": 125
+    },
+    {
+      "loanTypeResponse": "Personal",
+      "interestPayable": null,
+      "totalAmountPayable": null,
+      "id": 126
+    },
+    {
+      "loanTypeResponse": "",
+      "interestPayable": null,
+      "totalAmountPayable": null,
+      "id": 127
+    },
+    {
+      "loanTypeResponse": "Car",
+      "interestPayable": null,
+      "totalAmountPayable": null,
+      "id": 128
+    },
+    {
+      "loanTypeResponse": "Car",
+      "interestPayable": null,
+      "totalAmountPayable": null,
+      "id": 129
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 126000,
+      "interestPayable": 1248912,
+      "totalAmountPayable": 1374912,
+      "id": 130
+    },
+    {
+      "loanTypeResponse": "",
+      "principal": 89000,
+      "interestPayable": 2937,
+      "totalAmountPayable": 91937,
+      "id": 131
     }
   ]
 }

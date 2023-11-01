@@ -11,34 +11,31 @@ export class LoanCalculatorService {
   constructor(private http: HttpClient) {}
 
   simulateLoan(formData: any): Observable<any> {
-    console.log(formData)
-    const valorSimulado = formData.valorEmprestimo;
-    let tipoEmprestimo: string = '';
+    const principal = formData.loanAmount;
+    let loanTypeResponse: string = '';
     switch (formData.loanType) {
       case 1:
-          tipoEmprestimo = "Casa";
+          loanTypeResponse = "Home";
           break;
       case 2:
-          tipoEmprestimo = "Carro";
+          loanTypeResponse = "Car";
           break;
       case 3:
-          tipoEmprestimo = "Pessoal";
+          loanTypeResponse = "Personal";
           break;
-      default:
-          tipoEmprestimo = "Tipo de empréstimo desconhecido";
   }
-    const taxaEmprestimo = formData.taxaEmprestimo / 100 / 12;
-    const tipoPrazo = formData.tipoPrazo === 'year' ? 12 : 1;
-    const meses = formData.prazoEmprestimo * tipoPrazo;
+    const interestAmount = formData.interestAmount / 100 / 12;
+    const termType = formData.termType === 'year' ? 12 : 1;
+    const months = formData.loanTerm * termType;
 
-    const jurosPagar = valorSimulado * taxaEmprestimo * meses;
-    const valorTotalPagar = valorSimulado + jurosPagar;
+    const interestPayable = Math.round(principal * interestAmount * months);
+    const totalAmountPayable = Math.round(principal + interestPayable);
 
     const simulatedData = {
-      tipoEmprestimo,
-      valorSimulado,
-      jurosPagar,
-      valorTotalPagar,
+      loanTypeResponse,
+      principal,
+      interestPayable,
+      totalAmountPayable,
     };
 
     return this.http.post<any>(this.apiUrl, simulatedData);
