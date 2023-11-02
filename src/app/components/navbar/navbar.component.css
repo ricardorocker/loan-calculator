@@ -25,6 +25,11 @@ a {
 
 .first-row {
   font-size: 18px;
+  letter-spacing: 12px;
+}
+
+.second-row {
+  font-size: 12px;
 }
 
 .nav-links {

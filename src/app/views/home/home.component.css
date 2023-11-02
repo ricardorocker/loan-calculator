@@ -83,6 +83,12 @@ button:hover {
   background: linear-gradient(45deg, #b41a83 0%, #cc092f 49%, #f36279 100%);
 }
 
+@media screen and (max-height: 560px) {
+  .container {
+    height: 90%;
+  }  
+}
+
 @media screen and (max-width: 550px) {
   .home {
     height: 100vh;
