@@ -16,8 +16,8 @@ export class LoanCalculatorComponent {
     { id: 3, description: 'Personal' },
   ];
   graphData: Array<Graph> = [
-    { value: 1000, color: '#ff6b92', size: '', legend: 'Principal' },
-    { value: 100, color: '#e4002b', size: '', legend: 'Interest' },
+    { value: 1000, color: '#e0997d', size: '', legend: 'Principal' },
+    { value: 100, color: '#FA5412', size: '', legend: 'Interest' },
   ];
 
   constructor(
