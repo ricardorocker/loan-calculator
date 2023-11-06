@@ -15,6 +15,7 @@
   max-width: 1000px;
   width: 100%;
   text-align: left;
+  animation: delayAppearance 4s ease 0s 1;
 }
 
 .first-line {
@@ -93,5 +94,14 @@ code {
 
   .container {
     max-width: 800px;
+  }
+}
+
+@keyframes delayAppearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -4,7 +4,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
+
+.diagonal-image-top {
+  position: absolute;
+  top: 5px;
+  left: -61px;
+  transform: rotate(150deg);
+  width: 50%;
+  animation: delayAppearance 4s ease 0s 1 forwards
+}
+
+.diagonal-image-bottom {
+  position: absolute;
+  bottom: 0;
+  right: -60px;
+  transform: rotate(-30deg);
+  width: 50%;
+  animation: delayAppearance 4s ease 0s 1 forwards
+}
+
 
 .container {
   display: flex;
@@ -106,5 +127,14 @@ button:hover {
 
   .left-side {
     display: none;
+  }
+}
+
+@keyframes delayAppearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
