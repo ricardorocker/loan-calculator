@@ -6,7 +6,7 @@
 
 .calculator-page {
   background: black;
-  min-height: calc(100vh - 117px);
+  min-height: calc(100vh);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,7 +159,7 @@ button.apply {
     45deg,
     #dd8c6d 0%,
     #e86d3c 50%,
-    rgb(241, 95, 38) 100%
+    #FA5412 100%
   );
   color: #fff;
   box-shadow: 0px 3px 6px #00000033;
