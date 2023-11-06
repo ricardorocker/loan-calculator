@@ -30,9 +30,9 @@
 }
 
 .section-title {
-  font-size: 24px;
-  color: #a50f3c;
+  font-size: 20px;
   text-transform: uppercase;
+  color: #a50f3c;
 }
 
 .section-text {
@@ -50,13 +50,6 @@
 
 .section-item {
   margin-top: 15px;
-}
-
-.section-subtitle {
-  font-size: 18px;
-  color: #a50f3c;
-  text-transform: uppercase;
-  padding-bottom: 6px;
 }
 
 .inner-list {

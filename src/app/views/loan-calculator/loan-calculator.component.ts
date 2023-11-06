@@ -38,7 +38,6 @@ export class LoanCalculatorComponent {
   }
 
   onSubmit() {
-    console.log(this.loanForm)
     if (this.loanForm.valid) {
       const formData = this.loanForm.value;
       this.calculatorService.simulateLoan(formData).subscribe(
