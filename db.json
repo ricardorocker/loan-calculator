@@ -1403,6 +1403,27 @@
       "interestPayable": 100,
       "totalAmountPayable": 1100,
       "id": 203
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 1000,
+      "interestPayable": 100,
+      "totalAmountPayable": 1100,
+      "id": 204
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 1000,
+      "interestPayable": 100,
+      "totalAmountPayable": 1100,
+      "id": 205
+    },
+    {
+      "loanTypeResponse": "Home",
+      "principal": 125000,
+      "interestPayable": 8500,
+      "totalAmountPayable": 133500,
+      "id": 206
     }
   ]
 }

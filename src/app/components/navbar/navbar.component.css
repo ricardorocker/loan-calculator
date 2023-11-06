@@ -28,6 +28,10 @@ a {
   color: transparent;
 }
 
+.logo:hover {
+  transform: scale(1.05);
+}
+
 .first-row {
   font-size: 18px;
   letter-spacing: 12px;
@@ -44,6 +48,10 @@ a {
 
 .nav-links li {
   margin-right: 20px;
+}
+
+.nav-links li:hover {
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 550px) {

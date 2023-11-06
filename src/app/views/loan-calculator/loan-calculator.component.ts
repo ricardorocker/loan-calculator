@@ -26,7 +26,7 @@ export class LoanCalculatorComponent {
   ) {
     this.loanForm = this.formBuilder.group({
       loanType: [null, Validators.required],
-      loanAmount: [1000, [Validators.required, Validators.min(1000), Validators.max(50000)]],
+      loanAmount: [1000, [Validators.required, Validators.min(1000), Validators.max(200000)]],
       interestAmount: [10, [Validators.required, Validators.min(0.1), Validators.max(25)]],
       loanTerm: [1, [Validators.required, Validators.min(1), Validators.max(60)]],
       termType: ['year', Validators.required],
@@ -38,7 +38,9 @@ export class LoanCalculatorComponent {
   }
 
   onSubmit() {
+    console.log(this.loanForm)
     if (this.loanForm.valid) {
+      console.log(this.loanForm)
       const formData = this.loanForm.value;
       this.calculatorService.simulateLoan(formData).subscribe(
         (result) => {
