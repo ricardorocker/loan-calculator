@@ -2,7 +2,16 @@
   <form [formGroup]="loanForm" (ngSubmit)="onSubmit()">
     <div class="left-side">
       <div class="section">
-        <h5>Loan Type</h5>
+        <h5 style="display: inline-flex">Loan Type</h5>
+        <div
+          class="error-message"
+          *ngIf="
+            loanForm.get('loanType')!.hasError('required') &&
+            loanForm.get('loanType')!.touched
+          "
+        >
+          Please select a loan type.
+        </div>
 
         <div class="checkbox-group">
           <div class="ckb-loan-type">
@@ -16,15 +25,6 @@
           <div class="ckb-loan-type">
             <input type="radio" formControlName="loanType" [value]="3" />
             Personal
-          </div>
-          <div
-            class="error-message"
-            *ngIf="
-              loanForm.get('loanType')!.hasError('required') &&
-              loanForm.get('loanType')!.touched
-            "
-          >
-            Please select a loan type.
           </div>
         </div>
       </div>

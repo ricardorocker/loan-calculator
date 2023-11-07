@@ -10,22 +10,19 @@
 
 .diagonal-image-top {
   position: absolute;
-  top: 5px;
-  left: -61px;
-  transform: rotate(150deg);
-  width: 50%;
-  animation: delayAppearance 4s ease 0s 1 forwards
+  top: -100px;
+  left: -180px;
+  width: 700px;
+  animation: delayAppearance 4s ease 0s 1 forwards;
 }
 
 .diagonal-image-bottom {
   position: absolute;
-  bottom: 0;
-  right: -60px;
-  transform: rotate(-30deg);
-  width: 50%;
-  animation: delayAppearance 4s ease 0s 1 forwards
+  bottom: -80px;
+  right: -80px;
+  width: 400px;
+  animation: delayAppearance 4s ease 0s 1 forwards;
 }
-
 
 .container {
   display: flex;
@@ -34,18 +31,6 @@
   background-color: black;
   border-radius: 6px 6px 6px 6px;
   box-shadow: 0px 3px 6px #00000033;
-}
-
-.left-side {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.left-side img {
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .right-side {
@@ -58,7 +43,7 @@
 }
 
 .first-line {
-  font-size: 50px;
+  font-size: 70px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -68,12 +53,14 @@
   color: transparent;
   margin-top: 20px;
   margin-bottom: 30px;
+  opacity: 0;
+  animation: slideInFromTop 2s ease 0s 1 forwards;
 }
 
 .app-title {
   margin: 10px 0;
   margin-bottom: 60px;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -82,9 +69,11 @@
   background-clip: text;
   color: transparent;
   margin-top: 0;
+  opacity: 0;
+  animation: slideInFromRight 2s ease 0s 1 forwards;
 }
 
-button {
+.start-button {
   display: inline-flex;
   align-items: center;
   height: 48px;
@@ -102,11 +91,13 @@ button {
   box-shadow: 0px 3px 6px #00000033;
   text-transform: uppercase;
   font-weight: bold;
+  opacity: 0;
+  animation: slideInFromBottom 2s ease 0s 1 forwards;
 }
 
-button:hover {
-  color: white;
-  transform: scale(1.1);
+.start-button:hover {
+  background: white;
+  color: rgb(241, 95, 38);
 }
 
 @media screen and (max-height: 560px) {
@@ -115,18 +106,26 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 555px) {
   .home {
     height: 100vh;
+  }
+
+  .first-line {
+    font-size: 50px;
+  }
+
+  .diagonal-image-top {
+    width: 400px;
+  }
+
+  .diagonal-image-bottom {
+    width: 270px;
   }
 
   .container {
     width: 100%;
     height: 80%;
-  }
-
-  .left-side {
-    display: none;
   }
 }
 
@@ -135,6 +134,61 @@ button:hover {
     opacity: 0;
   }
   100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
     opacity: 1;
   }
 }

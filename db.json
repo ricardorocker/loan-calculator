@@ -1424,6 +1424,48 @@
       "interestPayable": 8500,
       "totalAmountPayable": 133500,
       "id": 206
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 101000,
+      "interestPayable": 413494,
+      "totalAmountPayable": 514494,
+      "id": 207
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 100000,
+      "interestPayable": 23333,
+      "totalAmountPayable": 123333,
+      "id": 208
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 200000,
+      "interestPayable": 250000,
+      "totalAmountPayable": 450000,
+      "id": 209
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 161000,
+      "interestPayable": 16100,
+      "totalAmountPayable": 177100,
+      "id": 210
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 161000,
+      "interestPayable": 40250,
+      "totalAmountPayable": 201250,
+      "id": 211
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 161000,
+      "interestPayable": 2415000,
+      "totalAmountPayable": 2576000,
+      "id": 212
     }
   ]
 }
