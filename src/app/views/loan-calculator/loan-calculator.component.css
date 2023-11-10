@@ -5,7 +5,7 @@
 }
 
 .calculator-page {
-  background: black;
+  background: var(--background-color);
   min-height: calc(100vh);
   display: flex;
   justify-content: center;
@@ -83,8 +83,8 @@ input[type="number"],
 .slider,
 select {
   padding: 10px;
-  border: none;
-  border-radius: 6px;
+  border: var(--input-borda);
+  border-radius: var(--input-raio);
   text-align: center;
   flex: 1;
   margin-right: 10px;
