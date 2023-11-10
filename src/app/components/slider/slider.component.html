@@ -1,0 +1,9 @@
+<input
+type="range"
+class="slider"
+[min]="minValue"
+[max]="maxValue"
+[step]="step"
+[ngModel]="control?.value"
+(ngModelChange)="control?.setValue($event)"
+/>

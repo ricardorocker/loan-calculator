@@ -31,16 +31,12 @@
       <div class="section">
         <h5>Loan Amount</h5>
         <div class="input-container">
-          <input
-            type="range"
-            class="slider"
-            id="range-slider-loan-amount"
-            formControlName="loanAmount"
-            [min]="1000"
-            [max]="200000"
+          <app-slider
+            [minValue]="1000"
+            [maxValue]="200000"
             [step]="1000"
-            [ngModel]="this.loanForm.controls['loanAmount'].value"
-          />
+            [control]="this.loanForm.get('loanAmount')"
+          ></app-slider>
           <input
             type="number"
             id="input-slider-loan-amount"
@@ -53,16 +49,13 @@
       <div class="section">
         <h5>Interest Amount</h5>
         <div class="input-container">
-          <input
-            type="range"
-            class="slider"
-            id="range-slider-interest-amount"
-            formControlName="interestAmount"
-            [min]="0.1"
-            [max]="25"
+          <app-slider
+            [minValue]="0.1"
+            [maxValue]="25"
             [step]="0.1"
-            [ngModel]="this.loanForm.controls['interestAmount'].value"
-          />
+            [control]="this.loanForm.get('interestAmount')"
+          ></app-slider>
+
           <input
             type="number"
             id="input-slider-interest-amount"
@@ -76,15 +69,12 @@
       <div class="section">
         <h5>Loan Term</h5>
         <div class="input-container">
-          <input
-            type="range"
-            class="slider"
-            id="range-slider-loan-term"
-            formControlName="loanTerm"
-            [min]="1"
-            [max]="60"
-            [ngModel]="this.loanForm.controls['loanTerm'].value"
-          />
+          <app-slider
+            [minValue]="1"
+            [maxValue]="60"
+            [step]="1"
+            [control]="this.loanForm.get('loanTerm')"
+          ></app-slider>
           <input
             type="number"
             id="input-slider-loan-term"
