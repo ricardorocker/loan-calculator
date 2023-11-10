@@ -1,17 +1,25 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'loan-calculator';
-  
-  constructor(private router: Router) { }
+  isHomePage: boolean = false;
 
-  isHomePage(): boolean {
-    return this.router.url === '/home';
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(
+        filter(
+          (event): event is NavigationEnd => event instanceof NavigationEnd
+        )
+      )
+      .subscribe((event: NavigationEnd) => {
+        this.isHomePage = event.url === '/home';
+      });
   }
 }
