@@ -2,7 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-export interface LoanSimulationResult {
+interface LoanFormData {
+  loanType: number;
+  loanAmount: number;
+  interestAmount: number;
+  loanTerm: number;
+  termType: string;
+}
+
+export interface SimulatedData {
   loanTypeResponse: string;
   principal: number;
   interestPayable: number;
@@ -17,34 +25,51 @@ export class LoanCalculatorService {
 
   constructor(private http: HttpClient) {}
 
-  simulateLoan(formData: any): Observable<LoanSimulationResult> {
-    const principal = formData.loanAmount;
-    let loanTypeResponse: string = '';
-    switch (formData.loanType) {
-      case 1:
-          loanTypeResponse = "Home";
-          break;
-      case 2:
-          loanTypeResponse = "Car";
-          break;
-      case 3:
-          loanTypeResponse = "Personal";
-          break;
-  }
-    const interestAmount = formData.interestAmount / 100 / 12;
-    const termType = formData.termType === 'year' ? 12 : 1;
-    const months = formData.loanTerm * termType;
+  simulateLoan(formData: LoanFormData): Observable<SimulatedData> {
+    const { loanAmount, interestAmount, termType, loanTerm, loanType } =
+      formData;
 
-    const interestPayable = Math.round(principal * interestAmount * months);
-    const totalAmountPayable = Math.round(principal + interestPayable);
+    const loanTypeResponse = this.getLoanTypeResponse(loanType);
+    const interestPayable = this.calculateInterestPayable(
+      loanAmount,
+      interestAmount,
+      termType,
+      loanTerm
+    );
+    const totalAmountPayable = loanAmount + interestPayable;
 
-    const simulatedData = {
+    const simulatedData: SimulatedData = {
       loanTypeResponse,
-      principal,
+      principal: loanAmount,
       interestPayable,
       totalAmountPayable,
     };
 
-    return this.http.post<LoanSimulationResult>(this.apiUrl, simulatedData);
+    return this.http.post<SimulatedData>(this.apiUrl, simulatedData);
+  }
+
+  private getLoanTypeResponse(loanType: number): string {
+    switch (loanType) {
+      case 1:
+        return 'Home';
+      case 2:
+        return 'Car';
+      case 3:
+        return 'Personal';
+      default:
+        return '';
+    }
+  }
+
+  private calculateInterestPayable(
+    loanAmount: number,
+    interestAmount: number,
+    termType: string,
+    loanTerm: number
+  ): number {
+    const interestRate = interestAmount / 100 / (termType === 'year' ? 12 : 1);
+    const months = loanTerm * (termType === 'year' ? 12 : 1);
+
+    return Math.round(loanAmount * interestRate * months);
   }
 }
