@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LoanType } from 'src/app/enums/loan-type.enum';
 import { Graph } from 'src/app/model/graph';
 import { LoanCalculatorService } from 'src/app/services/loan-calculator.service';
 import { SimulatedData } from 'src/app/services/loan-calculator.service';
@@ -11,11 +12,7 @@ import { SimulatedData } from 'src/app/services/loan-calculator.service';
 })
 export class LoanCalculatorComponent {
   loanForm!: FormGroup;
-  loanTypes = [
-    { id: 1, description: 'Home' },
-    { id: 2, description: 'Car' },
-    { id: 3, description: 'Personal' },
-  ];
+  loanTypes = LoanType;
   graphData: Array<Graph> = [
     {
       value: 1000,
