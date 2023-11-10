@@ -1,13 +1,13 @@
 <nav>
   <a routerLink="/home">
-    <div class="logo">
+    <div class="logo fw-bold">
       <div class="first-row">Loan</div>
       <div class="second-row">Calculator</div>
     </div>
   </a>
   <ul class="nav-links">
-    <li><a routerLink="/home">Home</a></li>
-    <li><a routerLink="/loan-calculator">Simulation</a></li>
-    <li><a routerLink="/about">About</a></li>
+    <li *ngFor="let link of navLinks">
+      <a [routerLink]="link.url">{{ link.label }}</a>
+    </li>
   </ul>
 </nav>
