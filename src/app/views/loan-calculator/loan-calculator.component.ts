@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { LoanTypeArray } from 'src/app/enums/loan-type.enum';
 import { Graph } from 'src/app/model/graph';
 import { LoanCalculatorService } from 'src/app/services/loan-calculator.service';
@@ -13,21 +14,28 @@ import { SimulatedData } from 'src/app/services/loan-calculator.service';
 export class LoanCalculatorComponent {
   loanForm!: FormGroup;
   loanTypes = LoanTypeArray;
-
   graphData: Array<Graph> = [
     {
-      value: 1000,
+      value: 0,
       color: 'var(--secondary-color)',
       size: '',
       legend: 'Principal',
     },
-    { value: 100, color: 'var(--primary-color)', size: '', legend: 'Interest' },
+    { value: 0, color: 'var(--primary-color)', size: '', legend: 'Interest' },
   ];
+
+  calculatorResponse$ = new BehaviorSubject<SimulatedData | null>(null);
+  private destroy$ = new Subject<void>();
 
   constructor(
     private formBuilder: FormBuilder,
     private calculatorService: LoanCalculatorService
   ) {}
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 
   ngOnInit(): void {
     this.initForm();
@@ -49,25 +57,24 @@ export class LoanCalculatorComponent {
         [Validators.required, Validators.min(1), Validators.max(60)],
       ],
       termType: ['year', Validators.required],
-      loanTypeResponse: [''],
-      principal: [1000],
-      interestPayable: [100],
-      totalAmountPayable: [1100],
     });
   }
 
   onSubmit() {
     if (this.loanForm.valid) {
       const formData = this.loanForm.value;
-      this.calculatorService.simulateLoan(formData).subscribe({
-        next: (result: SimulatedData) => {
-          this.updateGraphData(result);
-          this.updateFormValues(result);
-        },
-        error: (error) => {
-          console.error('Error calculating loan', error);
-        },
-      });
+      this.calculatorService
+        .simulateLoan(formData)
+        .pipe(takeUntil(this.destroy$))
+        .subscribe({
+          next: (result: any) => {
+            this.calculatorResponse$.next(result);
+            this.updateGraphData(result);
+          },
+          error: (error) => {
+            console.error('Error calculating loan', error);
+          },
+        });
     } else {
       this.loanForm.markAllAsTouched();
     }
@@ -81,15 +88,6 @@ export class LoanCalculatorComponent {
         item.value = result.interestPayable;
       }
       return item;
-    });
-  }
-
-  private updateFormValues(result: SimulatedData): void {
-    this.loanForm.patchValue({
-      loanTypeResponse: result.loanTypeResponse,
-      principal: result.principal,
-      interestPayable: result.interestPayable,
-      totalAmountPayable: result.totalAmountPayable,
     });
   }
 }

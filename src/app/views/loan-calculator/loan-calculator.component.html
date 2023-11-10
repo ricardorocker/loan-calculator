@@ -91,9 +91,7 @@
           <div class="row">
             <div class="info fw-bold">
               Loan
-              <span *ngIf="loanForm.value.loanTypeResponse">
-                : {{ loanForm.value.loanTypeResponse | uppercase }}
-              </span>
+              {{ (calculatorResponse$ | async)?.loanTypeResponse | uppercase }}
             </div>
           </div>
         </div>
@@ -105,20 +103,35 @@
             <span class="small-circle light-red"></span>
             <div class="info">Principal</div>
             <div class="amount-total">
-              {{ loanForm.value.principal | currency }}
+              {{
+                ((calculatorResponse$ | async)
+                  ? (calculatorResponse$ | async)?.principal
+                  : 0
+                ) | currency : "USD" : "symbol" : "1.2-2"
+              }}
             </div>
           </div>
           <div class="row">
             <span class="small-circle dark-red"></span>
             <div class="info">Interest Payable</div>
             <div class="amount-total">
-              {{ loanForm.value.interestPayable | currency }}
+              {{
+                ((calculatorResponse$ | async)
+                  ? (calculatorResponse$ | async)?.interestPayable
+                  : 0
+                ) | currency : "USD" : "symbol" : "1.2-2"
+              }}
             </div>
           </div>
           <div class="row">
             <div class="info fw-bold">Total Amount Payable</div>
             <div class="amount-total fw-bold">
-              {{ loanForm.value.totalAmountPayable | currency }}
+              {{
+                ((calculatorResponse$ | async)
+                  ? (calculatorResponse$ | async)?.totalAmountPayable
+                  : 0
+                ) | currency : "USD" : "symbol" : "1.2-2"
+              }}
             </div>
           </div>
         </div>
