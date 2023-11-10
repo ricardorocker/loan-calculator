@@ -12,19 +12,14 @@
         >
           Please select a loan type.
         </div>
-
         <div class="checkbox-group">
-          <div class="ckb-loan-type">
-            <input type="radio" formControlName="loanType" [value]="1" />
-            Home
-          </div>
-          <div class="ckb-loan-type">
-            <input type="radio" formControlName="loanType" [value]="2" />
-            Car
-          </div>
-          <div class="ckb-loan-type">
-            <input type="radio" formControlName="loanType" [value]="3" />
-            Personal
+          <div class="ckb-loan-type" *ngFor="let type of loanTypes">
+            <input
+              type="radio"
+              formControlName="loanType"
+              [value]="type.value"
+            />
+            {{ type.label }}
           </div>
         </div>
       </div>
