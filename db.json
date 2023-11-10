@@ -1564,6 +1564,27 @@
       "interestPayable": 126720,
       "totalAmountPayable": 190720,
       "id": 226
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 1000,
+      "interestPayable": 104.71306744129674,
+      "totalAmountPayable": 1104.7130674412967,
+      "id": 227
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 79000,
+      "interestPayable": 929626,
+      "totalAmountPayable": 1008626,
+      "id": 228
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 79000,
+      "interestPayable": 27612,
+      "totalAmountPayable": 106612,
+      "id": 229
     }
   ]
 }

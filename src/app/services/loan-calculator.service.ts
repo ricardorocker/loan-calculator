@@ -29,12 +29,17 @@ export class LoanCalculatorService {
   private calculateLoan(formData: LoanFormData): SimulatedData {
     const principal = formData.loanAmount;
     const loanTypeResponse = LoanType[formData.loanType] || '';
-    const interestAmount = formData.interestAmount / 100 / 12;
+    const annualInterestRate = formData.interestAmount / 100;
     const termType = formData.termType === 'year' ? 12 : 1;
-    const months = formData.loanTerm * termType;
+    const periods = formData.loanTerm * termType;
 
-    const interestPayable = Math.round(principal * interestAmount * months);
-    const totalAmountPayable = Math.round(principal + interestPayable);
+    // A = P(1 + r/n)^(nt)
+    const interestPayable = Math.round(
+      principal * Math.pow(1 + annualInterestRate / termType, periods) -
+        principal
+    );
+
+    const totalAmountPayable = principal + interestPayable;
 
     return {
       loanTypeResponse,
