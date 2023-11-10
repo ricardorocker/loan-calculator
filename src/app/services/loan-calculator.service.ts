@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { LoanType } from 'src/app/enums/loan-type.enum';
 
 interface LoanFormData {
   loanType: number;
@@ -25,51 +26,26 @@ export class LoanCalculatorService {
 
   constructor(private http: HttpClient) {}
 
-  simulateLoan(formData: LoanFormData): Observable<SimulatedData> {
-    const { loanAmount, interestAmount, termType, loanTerm, loanType } =
-      formData;
+  private calculateLoan(formData: LoanFormData): SimulatedData {
+    const principal = formData.loanAmount;
+    const loanTypeResponse = LoanType[formData.loanType] || '';
+    const interestAmount = formData.interestAmount / 100 / 12;
+    const termType = formData.termType === 'year' ? 12 : 1;
+    const months = formData.loanTerm * termType;
 
-    const loanTypeResponse = this.getLoanTypeResponse(loanType);
-    const interestPayable = this.calculateInterestPayable(
-      loanAmount,
-      interestAmount,
-      termType,
-      loanTerm
-    );
-    const totalAmountPayable = loanAmount + interestPayable;
+    const interestPayable = Math.round(principal * interestAmount * months);
+    const totalAmountPayable = Math.round(principal + interestPayable);
 
-    const simulatedData: SimulatedData = {
+    return {
       loanTypeResponse,
-      principal: loanAmount,
+      principal,
       interestPayable,
       totalAmountPayable,
     };
+  }
 
+  simulateLoan(formData: LoanFormData): Observable<SimulatedData> {
+    const simulatedData = this.calculateLoan(formData);
     return this.http.post<SimulatedData>(this.apiUrl, simulatedData);
-  }
-
-  private getLoanTypeResponse(loanType: number): string {
-    switch (loanType) {
-      case 1:
-        return 'Home';
-      case 2:
-        return 'Car';
-      case 3:
-        return 'Personal';
-      default:
-        return '';
-    }
-  }
-
-  private calculateInterestPayable(
-    loanAmount: number,
-    interestAmount: number,
-    termType: string,
-    loanTerm: number
-  ): number {
-    const interestRate = interestAmount / 100 / (termType === 'year' ? 12 : 1);
-    const months = loanTerm * (termType === 'year' ? 12 : 1);
-
-    return Math.round(loanAmount * interestRate * months);
   }
 }
