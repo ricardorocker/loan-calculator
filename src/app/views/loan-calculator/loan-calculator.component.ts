@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Graph } from 'src/app/model/graph';
 import { LoanCalculatorService } from 'src/app/services/loan-calculator.service';
+import { LoanSimulationResult } from 'src/app/services/loan-calculator.service';
 
 @Component({
   selector: 'app-loan-calculator',
@@ -59,11 +60,9 @@ export class LoanCalculatorComponent {
 
   onSubmit() {
     if (this.loanForm.valid) {
-      console.log(this.loanForm);
-
       const formData = this.loanForm.value;
       this.calculatorService.simulateLoan(formData).subscribe({
-        next: (result) => {
+        next: (result: LoanSimulationResult) => {
           this.updateGraphData(result);
           this.updateFormValues(result);
         },
@@ -76,7 +75,7 @@ export class LoanCalculatorComponent {
     }
   }
 
-  private updateGraphData(result: any): void {
+  private updateGraphData(result: LoanSimulationResult): void {
     this.graphData = this.graphData.map((item, index) => {
       if (index === 0) {
         item.value = result.principal;
@@ -87,7 +86,7 @@ export class LoanCalculatorComponent {
     });
   }
 
-  private updateFormValues(result: any): void {
+  private updateFormValues(result: LoanSimulationResult): void {
     this.loanForm.patchValue({
       loanTypeResponse: result.loanTypeResponse,
       principal: result.principal,

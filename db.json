@@ -1529,6 +1529,13 @@
       "interestPayable": 14880,
       "totalAmountPayable": 44880,
       "id": 221
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 74000,
+      "interestPayable": 308728,
+      "totalAmountPayable": 382728,
+      "id": 222
     }
   ]
 }

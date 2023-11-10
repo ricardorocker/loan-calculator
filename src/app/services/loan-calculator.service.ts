@@ -2,6 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+export interface LoanSimulationResult {
+  loanTypeResponse: string;
+  principal: number;
+  interestPayable: number;
+  totalAmountPayable: number;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -10,7 +17,7 @@ export class LoanCalculatorService {
 
   constructor(private http: HttpClient) {}
 
-  simulateLoan(formData: any): Observable<any> {
+  simulateLoan(formData: any): Observable<LoanSimulationResult> {
     const principal = formData.loanAmount;
     let loanTypeResponse: string = '';
     switch (formData.loanType) {
@@ -38,6 +45,6 @@ export class LoanCalculatorService {
       totalAmountPayable,
     };
 
-    return this.http.post<any>(this.apiUrl, simulatedData);
+    return this.http.post<LoanSimulationResult>(this.apiUrl, simulatedData);
   }
 }
