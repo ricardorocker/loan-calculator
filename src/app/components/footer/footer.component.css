@@ -1,14 +1,14 @@
 .container {
-  color: hsl(17, 96%, 53%);
+  color: var(--primary-color);
   text-align: center;
 }
 
 footer {
-  background: black;
+  background: var(--background-color);
   padding: 20px 0;
 }
 
 a {
-  color: #FA5412;
+  color: var(--primary-color);
   text-decoration: none;
 }

@@ -1,6 +1,6 @@
 .home {
   height: 100vh;
-  background: black;
+  background: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,7 @@
   display: flex;
   margin: 0 14px;
   padding: 0 4px;
-  background-color: black;
+  background-color: var(--background-color);
   border-radius: 6px 6px 6px 6px;
   box-shadow: 0px 3px 6px #00000033;
 }

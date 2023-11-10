@@ -2,5 +2,8 @@
 
 :root {
     --background-color: #000;
+    --primary-color: #FA5412;
+    --secondary-color: #e0997d;
+    --gradient-color: linear-gradient(45deg, #e09d83 0%, #e86d3c 50%, #FA5412 100%);
   }
   

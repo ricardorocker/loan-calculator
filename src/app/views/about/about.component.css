@@ -1,5 +1,5 @@
 .about {
-  background: black;
+  background: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,12 +23,7 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  background: linear-gradient(
-    45deg,
-    #e09d83 0%,
-    #e86d3c 50%,
-    #c53800 100%
-  );
+  background: var(--gradient-color);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
