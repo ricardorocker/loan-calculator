@@ -16,8 +16,8 @@ export class LoanCalculatorComponent {
     { id: 3, description: 'Personal' },
   ];
   graphData: Array<Graph> = [
-    { value: 1000, color: '#ff6b92', size: '', legend: 'Principal' },
-    { value: 100, color: '#e4002b', size: '', legend: 'Interest' },
+    { value: 1000, color: '#e0997d', size: '', legend: 'Principal' },
+    { value: 100, color: '#FA5412', size: '', legend: 'Interest' },
   ];
 
   constructor(
@@ -26,7 +26,7 @@ export class LoanCalculatorComponent {
   ) {
     this.loanForm = this.formBuilder.group({
       loanType: [null, Validators.required],
-      loanAmount: [1000, [Validators.required, Validators.min(1000), Validators.max(50000)]],
+      loanAmount: [1000, [Validators.required, Validators.min(1000), Validators.max(200000)]],
       interestAmount: [10, [Validators.required, Validators.min(0.1), Validators.max(25)]],
       loanTerm: [1, [Validators.required, Validators.min(1), Validators.max(60)]],
       termType: ['year', Validators.required],
@@ -40,6 +40,7 @@ export class LoanCalculatorComponent {
   onSubmit() {
     console.log(this.loanForm)
     if (this.loanForm.valid) {
+      console.log(this.loanForm)
       const formData = this.loanForm.value;
       this.calculatorService.simulateLoan(formData).subscribe(
         (result) => {

@@ -1,5 +1,5 @@
 nav {
-  background-color: #e4e5e9;
+  background: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,17 +10,26 @@ a {
   text-decoration: none;
   font-size: 18px;
   text-transform: uppercase;
-  color: #b92355;
+  color: #FA5412;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 0.5px;
-  background: linear-gradient(to right, #f36279 0%, #cc092f 10%, #b41a83 70%);
+  background: linear-gradient(
+    45deg,
+    #e09d83 0%,
+    #e86d3c 50%,
+    #FA5412 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .first-row {
@@ -39,7 +48,10 @@ a {
 
 .nav-links li {
   margin-right: 20px;
-  font-weight: bold;
+}
+
+.nav-links li:hover {
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 550px) {

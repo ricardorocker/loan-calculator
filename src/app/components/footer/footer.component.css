@@ -1,14 +1,14 @@
 .container {
-  color: #e1173f;
+  color: hsl(17, 96%, 53%);
   text-align: center;
 }
 
 footer {
-  background-color: #e4e5e9;
+  background: black;
   padding: 20px 0;
 }
 
 a {
-  color: #e1173f;
+  color: #FA5412;
   text-decoration: none;
 }
