@@ -8,7 +8,8 @@
 
 .home,
 .welcome,
-.start-button {  
+.start-button,
+.container {
   justify-content: center;
   align-items: center;
 }

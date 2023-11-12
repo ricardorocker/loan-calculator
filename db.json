@@ -1669,6 +1669,90 @@
       "interestPayable": 105,
       "totalAmountPayable": 1105,
       "id": 241
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 1000,
+      "interestPayable": 105,
+      "totalAmountPayable": 1105,
+      "id": 242
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 1000,
+      "interestPayable": 71,
+      "totalAmountPayable": 1071,
+      "id": 243
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 1000,
+      "interestPayable": 781,
+      "totalAmountPayable": 1781,
+      "id": 244
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 1000,
+      "interestPayable": 3670,
+      "totalAmountPayable": 4670,
+      "id": 245
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 90000,
+      "interestPayable": 1528518,
+      "totalAmountPayable": 1618518,
+      "id": 246
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 61000,
+      "interestPayable": 74309,
+      "totalAmountPayable": 135309,
+      "id": 247
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 55000,
+      "interestPayable": 1227384,
+      "totalAmountPayable": 1282384,
+      "id": 248
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 50000,
+      "interestPayable": 79687,
+      "totalAmountPayable": 129687,
+      "id": 249
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 50000,
+      "interestPayable": 79687,
+      "totalAmountPayable": 129687,
+      "id": 250
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 98000,
+      "interestPayable": 3355169,
+      "totalAmountPayable": 3453169,
+      "id": 251
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 57000,
+      "interestPayable": 16082,
+      "totalAmountPayable": 73082,
+      "id": 252
+    },
+    {
+      "loanTypeResponse": "Car",
+      "principal": 62000,
+      "interestPayable": 17416,
+      "totalAmountPayable": 79416,
+      "id": 253
     }
   ]
 }

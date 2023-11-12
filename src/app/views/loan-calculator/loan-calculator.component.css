@@ -143,6 +143,11 @@ select {
   font-weight: bold;
 }
 
+.amount-total {
+  display: flex;
+  justify-content: end;
+}
+
 button.apply {
   display: block;
   width: 100%;
